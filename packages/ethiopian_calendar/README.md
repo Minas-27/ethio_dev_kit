@@ -112,7 +112,7 @@ civil life.
 
 ## Contributing
 
-Part of the [ethio_dev_kit](https://github.com/abrahamdev/ethio_dev_kit)
+Part of the [ethio_dev_kit](https://github.com/abroid-dev/ethio_dev_kit)
 monorepo. Issues and PRs welcome — please run `dart analyze` and `dart test`
 before submitting.
 

@@ -3,9 +3,9 @@ description: >-
   Convert between Gregorian and Ethiopian calendar dates with Amharic month and
   day names, formatting, and date arithmetic. Pure Dart, dependency-free.
 version: 0.1.0
-homepage: https://github.com/abrahamdev/ethio_dev_kit/tree/main/packages/ethiopian_calendar
-repository: https://github.com/abrahamdev/ethio_dev_kit/tree/main/packages/ethiopian_calendar
-issue_tracker: https://github.com/abrahamdev/ethio_dev_kit/issues
+homepage: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/ethiopian_calendar
+repository: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/ethiopian_calendar
+issue_tracker: https://github.com/abroid-dev/ethio_dev_kit/issues
 topics:
   - ethiopia
   - calendar
