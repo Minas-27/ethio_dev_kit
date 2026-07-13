@@ -14,9 +14,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package:
-          - ethiopian_calendar
-          - ethio_validators
+        # `analyze` scopes `dart analyze` per package. ethiopian_calendar ships
+        # a supplementary Flutter demo under example/flutter_app/ that requires
+        # the Flutter SDK — which this Dart-only job does not have — so it is
+        # excluded here and only its pure-Dart sources (lib, test, and the
+        # standalone example) are analyzed. ethio_validators has no Flutter
+        # code, so it analyzes the whole package directory.
+        include:
+          - package: ethiopian_calendar
+            analyze: lib test example/ethiopian_calendar_example.dart
+          - package: ethio_validators
+            analyze: .
     defaults:
       run:
         working-directory: packages/${{ matrix.package }}
@@ -27,7 +35,7 @@ jobs:
           sdk: stable
       - run: dart pub get
       - run: dart format --output=none --set-exit-if-changed .
-      - run: dart analyze --fatal-infos --fatal-warnings .
+      - run: dart analyze --fatal-infos --fatal-warnings ${{ matrix.analyze }}
       - run: dart test
 
   # Flutter packages: analyze + test with the Flutter SDK.
