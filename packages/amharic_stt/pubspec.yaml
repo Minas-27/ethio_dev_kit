@@ -1,0 +1,41 @@
+name: amharic_stt
+description: >-
+  On-device Amharic (am-ET) speech-to-text for Flutter. A thin, typed wrapper
+  over the platform speech recognizer (Android SpeechRecognizer, iOS
+  SFSpeechRecognizer) with honest availability checks and no custom engine.
+version: 0.1.0
+homepage: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/amharic_stt
+repository: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/amharic_stt
+issue_tracker: https://github.com/abroid-dev/ethio_dev_kit/issues
+topics:
+  - ethiopia
+  - amharic
+  - speech-to-text
+  - speech-recognition
+  - voice
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+# This plugin wraps each platform's native recognizer via method + event
+# channels; it does not bundle a recognition engine. See README for the
+# platform/locale support matrix and what was verified vs. expected.
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.abroid.amharic_stt
+        pluginClass: AmharicSttPlugin
+      ios:
+        pluginClass: AmharicSttPlugin

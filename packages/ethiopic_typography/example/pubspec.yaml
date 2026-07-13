@@ -1,0 +1,22 @@
+name: ethiopic_typography_example
+description: A minimal Flutter app showcasing bilingual English/Amharic theming.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ethiopic_typography:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

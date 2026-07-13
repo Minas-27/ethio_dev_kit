@@ -1,0 +1,41 @@
+name: ethiopic_typography
+description: >-
+  Drop-in bilingual (English/Amharic) Flutter theming with the Manrope + Noto
+  Sans Ethiopic font pairing. Latin text renders in Manrope; Ge'ez script falls
+  back to Noto Sans Ethiopic automatically.
+version: 0.1.0
+homepage: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/ethiopic_typography
+repository: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/ethiopic_typography
+issue_tracker: https://github.com/abroid-dev/ethio_dev_kit/issues
+topics:
+  - ethiopia
+  - amharic
+  - typography
+  - theme
+  - fonts
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+# Manrope and Noto Sans Ethiopic are bundled as package assets (SIL Open Font
+# License 1.1) so the pairing works fully offline — no runtime font fetching.
+# Both are variable fonts; Flutter maps each TextStyle.fontWeight to the wght
+# axis. See fonts/OFL-Manrope.txt and fonts/OFL-NotoSansEthiopic.txt.
+flutter:
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: fonts/Manrope-Variable.ttf
+    - family: Noto Sans Ethiopic
+      fonts:
+        - asset: fonts/NotoSansEthiopic-Variable.ttf

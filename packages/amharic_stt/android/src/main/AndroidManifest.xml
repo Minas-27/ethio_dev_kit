@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.abroid.amharic_stt">
+
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <!--
+    Android 11+ (API 30) package visibility: declare that this app queries an
+    app handling the speech-recognition intent, so SpeechRecognizer can bind to
+    the on-device recognition service.
+  -->
+  <queries>
+    <intent>
+      <action android:name="android.speech.RecognitionService" />
+    </intent>
+  </queries>
+</manifest>

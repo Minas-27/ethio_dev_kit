@@ -1,0 +1,21 @@
+name: ethio_validators
+description: >-
+  Validation and formatting utilities for Ethiopian data: mobile phone numbers
+  (Ethio Telecom & Safaricom) and ETB currency. Pure Dart, dependency-free.
+version: 0.1.0
+homepage: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/ethio_validators
+repository: https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/ethio_validators
+issue_tracker: https://github.com/abroid-dev/ethio_dev_kit/issues
+topics:
+  - ethiopia
+  - validation
+  - phone
+  - currency
+  - formatting
+
+environment:
+  sdk: ^3.6.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0
