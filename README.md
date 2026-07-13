@@ -1,8 +1,8 @@
 # Ethio Dev Kit
 
 A collection of small, focused Dart and Flutter packages for building apps for
-Ethiopia. Each package solves one common, locale-specific problem well —
-calendar conversion, Amharic typography, input validation, and speech-to-text —
+Ethiopia. Each package solves one common, locale-specific problem well
+calendar conversion, Amharic typography, input validation, and speech-to-text
 so you don't have to re-implement it in every project.
 
 Built for Flutter and Dart developers shipping products for Ethiopian users.
