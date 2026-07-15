@@ -7,14 +7,15 @@ void main() {
     print('\n================================');
     print('  ETHIOPIAN HOLIDAYS FOR $year');
     print('================================');
-    
+
     final holidays = holidaysForYear(year);
-    
+
     for (final holiday in holidays) {
       final dateStr = holiday.date.toString().substring(0, 10);
       final estimatedStr = holiday.isEstimated ? ' (Estimated ±1 day)' : '';
-      
-      print('$dateStr | ${holiday.name.padRight(25)} | ${holiday.nameAmharic}$estimatedStr');
+
+      print(
+          '$dateStr | ${holiday.name.padRight(25)} | ${holiday.nameAmharic}$estimatedStr');
     }
   }
 }

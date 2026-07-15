@@ -39,17 +39,17 @@ DateTime calculateOrthodoxEaster(int gregorianYear) {
 /// The epoch used is Friday, July 19, 622 AD (1948440 JDN).
 DateTime tabularHijriToGregorian(int year, int month, int day) {
   const epochJdn = 1948440; // 1 Muharram 1 AH in Julian Day Number
-  
+
   // Total days in completed years
   final daysInYears = (year - 1) * 354 + (11 * year + 3) ~/ 30;
-  
+
   // Total days in completed months of the current year.
   // Odd months have 30 days, even months have 29 days.
   final daysInMonths = 29 * (month - 1) + month ~/ 2;
-  
+
   final jdn = epochJdn + daysInYears + daysInMonths + day - 1;
-  
+
   final g = jdnToGregorian(jdn);
-  
+
   return DateTime(g[0], g[1], g[2]);
 }

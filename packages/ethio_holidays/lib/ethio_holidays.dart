@@ -1,7 +1,8 @@
 import 'package:ethio_calendar/ethio_calendar.dart';
 import 'src/computus.dart';
 
-export 'src/computus.dart' show calculateOrthodoxEaster, tabularHijriToGregorian;
+export 'src/computus.dart'
+    show calculateOrthodoxEaster, tabularHijriToGregorian;
 
 /// Category of an Ethiopian holiday.
 enum EthioHolidayCategory {
@@ -49,7 +50,8 @@ class EthioHoliday {
 /// for the given [gregorianYear].
 ///
 /// Optionally filter by [category].
-List<EthioHoliday> holidaysForYear(int gregorianYear, {EthioHolidayCategory? category}) {
+List<EthioHoliday> holidaysForYear(int gregorianYear,
+    {EthioHolidayCategory? category}) {
   final holidays = <EthioHoliday>[];
 
   // 1. FIXED HOLIDAYS
@@ -70,7 +72,8 @@ List<EthioHoliday> holidaysForYear(int gregorianYear, {EthioHolidayCategory? cat
     final ethYears = [ethYear1, ethYear2];
 
     for (final ethYear in ethYears) {
-      void addFixedEthioHoliday(int month, int day, String name, String nameAmharic, String description) {
+      void addFixedEthioHoliday(int month, int day, String name,
+          String nameAmharic, String description) {
         final gregDate = EthiopianDate(ethYear, month, day).toGregorian();
         if (gregDate.year == gregorianYear) {
           holidays.add(EthioHoliday(
@@ -84,19 +87,23 @@ List<EthioHoliday> holidaysForYear(int gregorianYear, {EthioHolidayCategory? cat
       }
 
       addFixedEthioHoliday(1, 1, "Enkutatash", "እንቁጣጣሽ", "Ethiopian New Year.");
-      addFixedEthioHoliday(1, 17, "Meskel", "መስቀል", "Finding of the True Cross.");
+      addFixedEthioHoliday(
+          1, 17, "Meskel", "መስቀል", "Finding of the True Cross.");
       addFixedEthioHoliday(4, 29, "Genna", "ገና", "Ethiopian Christmas.");
       addFixedEthioHoliday(5, 11, "Timkat", "ጥምቀት", "Ethiopian Epiphany.");
-      addFixedEthioHoliday(6, 23, "Adwa Victory Day", "የዓድዋ ድል መታሰቢያ", "Commemoration of the Victory of Adwa.");
-      addFixedEthioHoliday(8, 27, "Patriots' Victory Day", "የአርበኞች ቀን", "Ethiopian Patriots' Victory Day.");
-      addFixedEthioHoliday(9, 20, "Downfall of the Derg", "ደርግ የወደቀበት ቀን", "Commemoration of the Downfall of the Derg.");
+      addFixedEthioHoliday(6, 23, "Adwa Victory Day", "የዓድዋ ድል መታሰቢያ",
+          "Commemoration of the Victory of Adwa.");
+      addFixedEthioHoliday(8, 27, "Patriots' Victory Day", "የአርበኞች ቀን",
+          "Ethiopian Patriots' Victory Day.");
+      addFixedEthioHoliday(9, 20, "Downfall of the Derg", "ደርግ የወደቀበት ቀን",
+          "Commemoration of the Downfall of the Derg.");
     }
   }
 
   // 2. ORTHODOX MOVEABLE FEASTS
   if (category == null || category == EthioHolidayCategory.orthodoxMoveable) {
     final fasikaDate = calculateOrthodoxEaster(gregorianYear);
-    
+
     // Start of Great Lent (Abiy Tsom) is 55 days before Easter
     holidays.add(EthioHoliday(
       name: "Start of Great Lent",
@@ -131,8 +138,11 @@ List<EthioHoliday> holidaysForYear(int gregorianYear, {EthioHolidayCategory? cat
     final approxHijriYear = ((gregorianYear - 622) * 33) ~/ 32;
 
     // Check a small window of Hijri years to find holidays falling in this Gregorian year
-    for (int hYear = approxHijriYear - 1; hYear <= approxHijriYear + 1; hYear++) {
-      void addIslamicHoliday(int month, int day, String name, String nameAmharic, String description) {
+    for (int hYear = approxHijriYear - 1;
+        hYear <= approxHijriYear + 1;
+        hYear++) {
+      void addIslamicHoliday(int month, int day, String name,
+          String nameAmharic, String description) {
         final gregDate = tabularHijriToGregorian(hYear, month, day);
         if (gregDate.year == gregorianYear) {
           holidays.add(EthioHoliday(
@@ -146,9 +156,12 @@ List<EthioHoliday> holidaysForYear(int gregorianYear, {EthioHolidayCategory? cat
         }
       }
 
-      addIslamicHoliday(10, 1, "Eid al-Fitr", "ዒድ አል-ፊጥር", "End of Ramadan (Estimated).");
-      addIslamicHoliday(12, 10, "Eid al-Adha", "ዒድ አል-አድሃ", "Feast of the Sacrifice (Estimated).");
-      addIslamicHoliday(3, 12, "Mawlid al-Nabi", "መውሊድ", "The Prophet's Birthday (Estimated).");
+      addIslamicHoliday(
+          10, 1, "Eid al-Fitr", "ዒድ አል-ፊጥር", "End of Ramadan (Estimated).");
+      addIslamicHoliday(12, 10, "Eid al-Adha", "ዒድ አል-አድሃ",
+          "Feast of the Sacrifice (Estimated).");
+      addIslamicHoliday(3, 12, "Mawlid al-Nabi", "መውሊድ",
+          "The Prophet's Birthday (Estimated).");
     }
   }
 

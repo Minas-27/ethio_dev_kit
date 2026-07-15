@@ -20,7 +20,8 @@ void main() {
 
     test('Labour Day is fixed to May 1', () {
       final holidays = holidaysForYear(2026);
-      final labour = holidays.firstWhere((h) => h.name == 'International Labour Day');
+      final labour =
+          holidays.firstWhere((h) => h.name == 'International Labour Day');
       expect(labour.date.month, 5);
       expect(labour.date.day, 1);
     });
@@ -47,7 +48,7 @@ void main() {
         final holidays = holidaysForYear(year);
         final fasikaHoliday = holidays.firstWhere((h) => h.name == 'Fasika');
         expect(fasikaHoliday.date, expectedDate);
-        
+
         final siklet = holidays.firstWhere((h) => h.name == 'Siklet');
         expect(siklet.date, expectedDate.subtract(const Duration(days: 2)));
       });
