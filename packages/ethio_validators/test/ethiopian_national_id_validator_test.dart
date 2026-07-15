@@ -12,16 +12,23 @@ void main() {
 
     test('isValid rejects invalid inputs', () {
       expect(EthiopianNationalIdValidator.isValid(''), isFalse);
-      expect(EthiopianNationalIdValidator.isValid('12345678901'), isFalse); // 11 digits
-      expect(EthiopianNationalIdValidator.isValid('1234567890123'), isFalse); // 13 digits
-      expect(EthiopianNationalIdValidator.isValid('12345678901A'), isFalse); // non-numeric
-      expect(EthiopianNationalIdValidator.isValid('1234.5678.9012'), isFalse); // dots not allowed
+      expect(EthiopianNationalIdValidator.isValid('12345678901'),
+          isFalse); // 11 digits
+      expect(EthiopianNationalIdValidator.isValid('1234567890123'),
+          isFalse); // 13 digits
+      expect(EthiopianNationalIdValidator.isValid('12345678901A'),
+          isFalse); // non-numeric
+      expect(EthiopianNationalIdValidator.isValid('1234.5678.9012'),
+          isFalse); // dots not allowed
     });
 
     test('normalize returns clean 12-digit string', () {
-      expect(EthiopianNationalIdValidator.normalize('1234 5678 9012'), '123456789012');
-      expect(EthiopianNationalIdValidator.normalize('1234-5678-9012'), '123456789012');
-      expect(EthiopianNationalIdValidator.normalize('123456789012'), '123456789012');
+      expect(EthiopianNationalIdValidator.normalize('1234 5678 9012'),
+          '123456789012');
+      expect(EthiopianNationalIdValidator.normalize('1234-5678-9012'),
+          '123456789012');
+      expect(EthiopianNationalIdValidator.normalize('123456789012'),
+          '123456789012');
     });
 
     test('normalize throws FormatException on invalid input', () {
@@ -37,9 +44,12 @@ void main() {
     });
 
     test('format groups 12 digits correctly', () {
-      expect(EthiopianNationalIdValidator.format('123456789012'), '1234 5678 9012');
-      expect(EthiopianNationalIdValidator.format('1234 5678 9012'), '1234 5678 9012');
-      expect(EthiopianNationalIdValidator.format('1234-5678-9012'), '1234 5678 9012');
+      expect(EthiopianNationalIdValidator.format('123456789012'),
+          '1234 5678 9012');
+      expect(EthiopianNationalIdValidator.format('1234 5678 9012'),
+          '1234 5678 9012');
+      expect(EthiopianNationalIdValidator.format('1234-5678-9012'),
+          '1234 5678 9012');
     });
 
     test('format throws FormatException on invalid input', () {

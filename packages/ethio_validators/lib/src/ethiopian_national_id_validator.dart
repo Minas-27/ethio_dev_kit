@@ -37,7 +37,7 @@ class EthiopianNationalIdValidator {
     if (input.isEmpty) return null;
 
     final digits = input.replaceAll(RegExp(r'[\s-]'), '');
-    
+
     // If there are any non-digit characters left, it's invalid.
     if (!RegExp(r'^\d{12}$').hasMatch(digits)) return null;
 
@@ -52,11 +52,11 @@ class EthiopianNationalIdValidator {
     if (id == null) {
       throw FormatException('Invalid Ethiopian Fayda ID', input);
     }
-    
+
     final group1 = id.substring(0, 4);
     final group2 = id.substring(4, 8);
     final group3 = id.substring(8, 12);
-    
+
     return '$group1 $group2 $group3';
   }
 }
