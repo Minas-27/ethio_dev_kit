@@ -1,9 +1,9 @@
 # ethiopic_typography
 
-<!-- Badges: replace <OWNER> once the repo is published, then uncomment. -->
+<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
 <!--
 [![pub package](https://img.shields.io/pub/v/ethiopic_typography.svg)](https://pub.dev/packages/ethiopic_typography)
-[![CI](https://github.com/<OWNER>/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/<OWNER>/ethio_dev_kit/actions/workflows/ci.yaml)
+[![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 -->
 
@@ -135,6 +135,6 @@ covers the font binaries only.
 
 ## Contributing
 
-Part of the [ethio_dev_kit](https://github.com/abroid-dev/ethio_dev_kit)
+Part of the [ethio_dev_kit](https://github.com/Minas-27/ethio_dev_kit)
 monorepo. Issues and pull requests are welcome — please run `flutter analyze` and
 `flutter test` (both must be clean/green) before opening a PR.

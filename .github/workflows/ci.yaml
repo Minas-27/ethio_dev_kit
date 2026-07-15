@@ -14,15 +14,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # `analyze` scopes `dart analyze` per package. ethiopian_calendar ships
+        # `analyze` scopes `dart analyze` per package. ethio_calendar ships
         # a supplementary Flutter demo under example/flutter_app/ that requires
         # the Flutter SDK — which this Dart-only job does not have — so it is
         # excluded here and only its pure-Dart sources (lib, test, and the
         # standalone example) are analyzed. ethio_validators has no Flutter
         # code, so it analyzes the whole package directory.
         include:
-          - package: ethiopian_calendar
-            analyze: lib test example/ethiopian_calendar_example.dart
+          - package: ethio_calendar
+            analyze: lib test example/ethio_calendar_example.dart
           - package: ethio_validators
             analyze: .
     defaults:

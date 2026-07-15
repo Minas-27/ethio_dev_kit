@@ -1,9 +1,9 @@
-# ethiopian_calendar
+# ethio_calendar
 
-<!-- Badges: replace <OWNER> once the repo is published, then uncomment. -->
+<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
 <!--
-[![pub package](https://img.shields.io/pub/v/ethiopian_calendar.svg)](https://pub.dev/packages/ethiopian_calendar)
-[![CI](https://github.com/<OWNER>/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/<OWNER>/ethio_dev_kit/actions/workflows/ci.yaml)
+[![pub package](https://img.shields.io/pub/v/ethio_calendar.svg)](https://pub.dev/packages/ethio_calendar)
+[![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 -->
 
@@ -29,13 +29,13 @@ runs — Flutter apps, server-side Dart, and command-line tools.
 
 ```yaml
 dependencies:
-  ethiopian_calendar: ^0.1.0
+  ethio_calendar: ^0.1.0
 ```
 
 Then:
 
 ```dart
-import 'package:ethiopian_calendar/ethiopian_calendar.dart';
+import 'package:ethio_calendar/ethio_calendar.dart';
 ```
 
 ## Quick start
@@ -97,8 +97,8 @@ literal quote. Unrecognised characters (`/`, `-`, `,`, spaces) pass through.
 
 ## Examples
 
-- [`example/ethiopian_calendar_example.dart`](example/ethiopian_calendar_example.dart)
-  — command-line demo (`dart run example/ethiopian_calendar_example.dart`).
+- [`example/ethio_calendar_example.dart`](example/ethio_calendar_example.dart)
+  — command-line demo (`dart run example/ethio_calendar_example.dart`).
 - [`example/flutter_app/`](example/flutter_app/) — a Flutter app with a date
   picker converting Gregorian → Ethiopian live.
 
@@ -112,7 +112,7 @@ civil life.
 
 ## Contributing
 
-Part of the [ethio_dev_kit](https://github.com/abroid-dev/ethio_dev_kit)
+Part of the [ethio_dev_kit](https://github.com/Minas-27/ethio_dev_kit)
 monorepo. Issues and PRs welcome — please run `dart analyze` and `dart test`
 before submitting.
 

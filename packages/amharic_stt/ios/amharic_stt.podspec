@@ -11,7 +11,7 @@ A thin, typed Flutter wrapper over iOS SFSpeechRecognizer, fixed to the Amharic
 (am-ET) locale. Does not bundle a recognition engine; availability depends on
 the device/OS.
                        DESC
-  s.homepage         = 'https://github.com/abroid-dev/ethio_dev_kit/tree/main/packages/amharic_stt'
+  s.homepage         = 'https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/amharic_stt'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Abraham' => 'abroid.dev@gmail.com' }
   s.source           = { :path => '.' }

@@ -1,9 +1,9 @@
-// A minimal command-line demonstration of the ethiopian_calendar package.
+// A minimal command-line demonstration of the ethio_calendar package.
 //
-// Run with:  dart run example/ethiopian_calendar_example.dart
+// Run with:  dart run example/ethio_calendar_example.dart
 //
 // ignore_for_file: avoid_print — printing to stdout is the point of a CLI demo.
-import 'package:ethiopian_calendar/ethiopian_calendar.dart';
+import 'package:ethio_calendar/ethio_calendar.dart';
 
 void main() {
   // Gregorian -> Ethiopian.

@@ -1,4 +1,4 @@
-name: ethiopian_calendar_flutter_example
+name: ethio_calendar_flutter_example
 description: A minimal Flutter app converting Gregorian dates to the Ethiopian calendar live.
 publish_to: none
 version: 1.0.0
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  ethiopian_calendar:
+  ethio_calendar:
     path: ../../
 
 dev_dependencies:

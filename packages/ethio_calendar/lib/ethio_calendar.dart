@@ -5,7 +5,7 @@
 /// Flutter apps, server-side Dart, and CLI tools alike.
 ///
 /// ```dart
-/// import 'package:ethiopian_calendar/ethiopian_calendar.dart';
+/// import 'package:ethio_calendar/ethio_calendar.dart';
 ///
 /// final eth = EthiopianDate.fromGregorian(DateTime(2026, 7, 9));
 /// print(eth.format('MMMM d, yyyy')); // Hamle 2, 2018

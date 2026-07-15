@@ -1,9 +1,9 @@
 # ethio_validators
 
-<!-- Badges: replace <OWNER> once the repo is published, then uncomment. -->
+<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
 <!--
 [![pub package](https://img.shields.io/pub/v/ethio_validators.svg)](https://pub.dev/packages/ethio_validators)
-[![CI](https://github.com/<OWNER>/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/<OWNER>/ethio_dev_kit/actions/workflows/ci.yaml)
+[![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 -->
 
@@ -123,7 +123,7 @@ dart run example/ethio_validators_example.dart
 
 ## Contributing
 
-Part of the [ethio_dev_kit](https://github.com/abroid-dev/ethio_dev_kit)
+Part of the [ethio_dev_kit](https://github.com/Minas-27/ethio_dev_kit)
 monorepo. Issues and pull requests are welcome — please run `dart analyze` and
 `dart test` (both must be clean/green) before opening a PR.
 

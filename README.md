@@ -12,14 +12,14 @@ and no third-party runtime dependencies.
 
 ## Packages
 
-### ethiopian_calendar
+### ethio_calendar
 
-[![pub package](https://img.shields.io/pub/v/ethiopian_calendar.svg)](https://pub.dev/packages/ethiopian_calendar)
+[![pub package](https://img.shields.io/pub/v/ethio_calendar.svg)](https://pub.dev/packages/ethio_calendar)
 
 Convert between Gregorian and Ethiopian calendar dates, with Amharic month and
 day names, formatting, and date arithmetic. Pure Dart, dependency-free.
 
-→ [`packages/ethiopian_calendar`](packages/ethiopian_calendar)
+→ [`packages/ethio_calendar`](packages/ethio_calendar)
 
 ### ethiopic_typography
 
@@ -66,7 +66,7 @@ current platform/locale support matrix.
 Add the package(s) you need from pub.dev and see each package's own README for
 installation details, full API docs, and runnable examples:
 
-- [ethiopian_calendar](packages/ethiopian_calendar/README.md)
+- [ethio_calendar](packages/ethio_calendar/README.md)
 - [ethiopic_typography](packages/ethiopic_typography/README.md)
 - [ethio_validators](packages/ethio_validators/README.md)
 - [amharic_stt](packages/amharic_stt/README.md)

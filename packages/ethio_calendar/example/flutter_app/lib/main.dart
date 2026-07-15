@@ -1,4 +1,4 @@
-import 'package:ethiopian_calendar/ethiopian_calendar.dart';
+import 'package:ethio_calendar/ethio_calendar.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const EthiopianCalendarDemoApp());
