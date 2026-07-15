@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0
+
+- Added `EthiopianNationalIdValidator` to validate and format 12-digit numeric Fayda IDs.
+
 ## 0.1.0
 
 Initial release.

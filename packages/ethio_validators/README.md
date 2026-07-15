@@ -63,6 +63,26 @@ Accepted input forms (separators such as spaces, `-`, `.`, and `()` are
 ignored): `09XXXXXXXX`, `07XXXXXXXX`, `2519XXXXXXXX`, `2517XXXXXXXX`,
 `+2519XXXXXXXX`, `+2517XXXXXXXX`, and the bare 9-digit `9XXXXXXXX` / `7XXXXXXXX`.
 
+### Fayda National ID
+
+> [!WARNING]  
+> **This validates basic 12-digit numeric format only.**
+> 
+> There is no publicly documented checksum for Fayda IDs, so this cannot detect a typo within an otherwise correctly-formatted 12-digit number. This does **NOT** verify that an ID is real, active, or belongs to a specific person.
+> 
+> For actual identity verification, apps must integrate with the official Fayda eKYC API via NIDP partnership. This package does not and will not attempt unauthorized identity verification.
+
+```dart
+EthiopianNationalIdValidator.isValid('123456789012');        // true
+EthiopianNationalIdValidator.isValid('1234-5678-9012');      // true
+
+// Normalize to a clean 12-digit string:
+EthiopianNationalIdValidator.normalize('1234 5678 9012');    // '123456789012'
+
+// Format for display:
+EthiopianNationalIdValidator.format('123456789012');         // '1234 5678 9012'
+```
+
 ### ETB currency
 
 ```dart
@@ -93,6 +113,15 @@ birr.format(1250.7);                      // '1,251 Br'
 
 `EthiopianCarrier` = `{ ethioTelecom, safaricom }`.
 `PhoneNumberFormat` = `{ local, international, e164 }`.
+
+### `EthiopianNationalIdValidator` (all static)
+
+| Member | Description |
+| --- | --- |
+| `isValid(String)` → `bool` | Whether the input, stripped of spaces and dashes, is exactly 12 numeric digits. |
+| `normalize(String)` → `String` | Returns the clean 12-digit string; throws `FormatException` if invalid. |
+| `tryNormalize(String)` → `String?` | Like `normalize`, but returns `null` on invalid input. |
+| `format(String)` → `String` | Formats as `1234 5678 9012`; throws if invalid. |
 
 ### `EtbFormatter`
 

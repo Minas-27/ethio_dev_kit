@@ -2,7 +2,7 @@ name: ethio_validators
 description: >-
   Validation and formatting utilities for Ethiopian data: mobile phone numbers
   (Ethio Telecom & Safaricom) and ETB currency. Pure Dart, dependency-free.
-version: 0.1.0
+version: 0.2.0
 homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_validators
 repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_validators
 issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues

@@ -2,6 +2,7 @@
 ///
 /// - [EthiopianPhoneValidator] — validate, normalize, and format Ethiopian
 ///   mobile numbers across Ethio Telecom (`09…`) and Safaricom (`07…`) ranges.
+/// - [EthiopianNationalIdValidator] — validate and format 12-digit Fayda IDs.
 /// - [EtbFormatter] — format and parse Ethiopian Birr (ETB) currency amounts.
 ///
 /// Pure Dart with zero runtime dependencies, so it runs everywhere Dart runs.
@@ -19,4 +20,5 @@
 library;
 
 export 'src/etb_formatter.dart';
+export 'src/ethiopian_national_id_validator.dart';
 export 'src/ethiopian_phone_validator.dart';
