@@ -23,6 +23,8 @@ jobs:
         include:
           - package: ethio_calendar
             analyze: lib test example/ethio_calendar_example.dart
+          - package: ethio_holidays
+            analyze: .
           - package: ethio_validators
             analyze: .
     defaults:

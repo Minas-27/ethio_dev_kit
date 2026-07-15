@@ -21,6 +21,16 @@ day names, formatting, and date arithmetic. Pure Dart, dependency-free.
 
 → [`packages/ethio_calendar`](packages/ethio_calendar)
 
+### ethio_holidays
+
+[![pub package](https://img.shields.io/pub/v/ethio_holidays.svg)](https://pub.dev/packages/ethio_holidays)
+
+Computes Ethiopian public and religious holidays dynamically for any Gregorian
+year — fixed holidays, Orthodox moveable feasts (via Meeus' Julian computus),
+and tabular Islamic estimates (explicitly flagged as ±1-day approximations).
+
+→ [`packages/ethio_holidays`](packages/ethio_holidays)
+
 ### ethiopic_typography
 
 [![pub package](https://img.shields.io/pub/v/ethiopic_typography.svg)](https://pub.dev/packages/ethiopic_typography)
@@ -53,7 +63,7 @@ bundled model.
 
 ## Status
 
-All four packages are at **0.1.0** and verified at the code level.
+All five packages are at **0.1.0** (or 0.1.1) and verified at the code level.
 
 **`amharic_stt` iOS support is unverified.** The Android implementation compiles
 and has been checked; the iOS (Swift / `SFSpeechRecognizer`) path has not yet
@@ -67,6 +77,7 @@ Add the package(s) you need from pub.dev and see each package's own README for
 installation details, full API docs, and runnable examples:
 
 - [ethio_calendar](packages/ethio_calendar/README.md)
+- [ethio_holidays](packages/ethio_holidays/README.md)
 - [ethiopic_typography](packages/ethiopic_typography/README.md)
 - [ethio_validators](packages/ethio_validators/README.md)
 - [amharic_stt](packages/amharic_stt/README.md)

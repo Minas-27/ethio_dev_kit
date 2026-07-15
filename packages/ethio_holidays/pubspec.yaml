@@ -1,0 +1,25 @@
+name: ethio_holidays
+description: >-
+  Computes Ethiopian public and religious holidays dynamically for any Gregorian year. Includes fixed holidays, Orthodox movable feasts, and tabular Islamic estimates.
+version: 0.1.0
+homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_holidays
+repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_holidays
+issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues
+topics:
+  - ethiopia
+  - calendar
+  - holidays
+  - date
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  # For local monorepo development, add a dependency_overrides in the root
+  # pubspec.yaml or use `melos bootstrap` which resolves path links
+  # automatically via the melos.yaml packages glob.
+  ethio_calendar: ^0.1.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0
