@@ -1,0 +1,23 @@
+name: ethio_address_example
+description: Example app for ethio_address.
+publish_to: 'none'
+
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ethio_address:
+    path: ..
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

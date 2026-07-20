@@ -1,0 +1,27 @@
+name: ethio_address
+description: >-
+  Ethiopian administrative division data and cascading Region-to-Zone-to-Woreda
+  picker widgets for Flutter, with a pure Dart data layer.
+version: 0.1.0
+homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_address
+repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_address
+issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues
+topics:
+  - ethiopia
+  - address
+  - region
+  - zone
+  - picker
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
