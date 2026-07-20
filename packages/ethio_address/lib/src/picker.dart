@@ -3,7 +3,26 @@ import 'package:flutter/material.dart';
 import 'data.dart';
 import 'models.dart';
 
+/// A cascading location picker for Ethiopian administrative divisions.
+///
+/// `EthioAddressPicker` presents up to three cascading dropdown fields:
+/// Region -> Zone -> Woreda. Which fields are shown is controlled by
+/// [level]. Selecting a parent field updates the available child options and
+/// clears any previously-selected child values. For example, changing the
+/// selected Region clears the Zone and Woreda selections; changing the Zone
+/// clears the Woreda selection.
 class EthioAddressPicker extends StatefulWidget {
+  /// Creates an `EthioAddressPicker`.
+  ///
+  /// - [level] controls which fields are visible. Defaults to showing all
+  ///   three levels.
+  /// - [initialSelection] pre-populates the picker; invalid or unknown ids are
+  ///   ignored and the control will normalise them on init.
+  /// - [onChanged] is called whenever the selection changes; it receives an
+  ///   `EthioAddressSelection` with nullable `regionId`, `zoneId`, and
+  ///   `woredaId` fields.
+  /// - [regionDecoration], [zoneDecoration], and [woredaDecoration] allow the
+  ///   caller to customise the `InputDecoration` for each dropdown.
   const EthioAddressPicker({
     super.key,
     this.level = EthioAddressPickerLevel.regionZoneWoreda,
@@ -14,11 +33,22 @@ class EthioAddressPicker extends StatefulWidget {
     this.woredaDecoration,
   });
 
+  /// Which levels the picker should display.
   final EthioAddressPickerLevel level;
+
+  /// An optional initial selection to pre-populate the fields.
   final EthioAddressSelection? initialSelection;
+
+  /// Called when the selection changes.
   final ValueChanged<EthioAddressSelection>? onChanged;
+
+  /// Optional decoration for the Region field.
   final InputDecoration? regionDecoration;
+
+  /// Optional decoration for the Zone field.
   final InputDecoration? zoneDecoration;
+
+  /// Optional decoration for the Woreda field.
   final InputDecoration? woredaDecoration;
 
   @override
@@ -66,7 +96,8 @@ class _EthioAddressPickerState extends State<EthioAddressPicker> {
     }
 
     final woredas = woredasForZone(_zoneId!);
-    if (_woredaId == null || woredas.every((woreda) => woreda.id != _woredaId)) {
+    if (_woredaId == null ||
+        woredas.every((woreda) => woreda.id != _woredaId)) {
       _woredaId = null;
     }
   }
@@ -84,8 +115,10 @@ class _EthioAddressPickerState extends State<EthioAddressPicker> {
   @override
   Widget build(BuildContext context) {
     final regions = allRegions();
-    final zones = _regionId == null ? const <EthioZone>[] : zonesForRegion(_regionId!);
-    final woredas = _zoneId == null ? const <EthioWoreda>[] : woredasForZone(_zoneId!);
+    final zones =
+        _regionId == null ? const <EthioZone>[] : zonesForRegion(_regionId!);
+    final woredas =
+        _zoneId == null ? const <EthioWoreda>[] : woredasForZone(_zoneId!);
 
     return Column(
       mainAxisSize: MainAxisSize.min,

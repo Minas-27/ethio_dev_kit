@@ -756,20 +756,33 @@ const List<EthioZone> _zones = <EthioZone>[
 
 const List<EthioWoreda> _woredas = <EthioWoreda>[];
 
+/// Returns an unmodifiable list of bundled first-level divisions (regions
+/// and chartered cities).
 List<EthioRegion> allRegions() => List<EthioRegion>.unmodifiable(_regions);
 
+/// Returns the zones bundled for [regionId].
+///
+/// If the package does not include zones for the requested region this will
+/// return an empty list. The returned list is unmodifiable.
 List<EthioZone> zonesForRegion(String regionId) {
   return List<EthioZone>.unmodifiable(
     _zones.where((EthioZone zone) => zone.regionId == regionId),
   );
 }
 
+/// Returns the woredas bundled for [zoneId].
+///
+/// Woreda-level data is not included in this release; this function currently
+/// returns an empty list for all zones. The API exists to allow consumers to
+/// swap in their own woreda dataset if available.
 List<EthioWoreda> woredasForZone(String zoneId) {
   return List<EthioWoreda>.unmodifiable(
     _woredas.where((EthioWoreda woreda) => woreda.zoneId == zoneId),
   );
 }
 
+/// Returns the `EthioRegion` matching [regionId], or `null` if none exists in
+/// the bundled dataset.
 EthioRegion? regionById(String regionId) {
   for (final region in _regions) {
     if (region.id == regionId) {

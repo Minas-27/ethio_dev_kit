@@ -4,11 +4,11 @@
 
 Initial release.
 
-- Bundled current Ethiopian first-level administrative division data:
   12 regional states and 2 chartered cities.
-- Pure Dart region / zone / woreda models plus lookup helpers.
-- Cascading Flutter picker widget for Region -> Zone -> Woreda.
-- Example Flutter app and widget / data integrity tests.
-- Zone-level data is included where it could be confirmed from current public
   references. Woreda-level data is not bundled because I could not verify a
   trustworthy, up-to-date source without guessing.
+## 0.1.1
+
+- Documentation: added comprehensive DartDoc comments for the public API
+  (models, data helpers, picker widget and parameters) to improve
+  documentation coverage and consumer ergonomics.

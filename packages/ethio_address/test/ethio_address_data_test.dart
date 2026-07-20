@@ -2,7 +2,8 @@ import 'package:ethio_address/ethio_address.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('bundled region count matches the current official first-level count', () {
+  test('bundled region count matches the current official first-level count',
+      () {
     expect(allRegions(), hasLength(14));
   });
 

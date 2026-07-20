@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="ethio_address library API docs, for the Dart programming language.">
+  <title>ethio_address library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">ethio_address</a></li>
+    <li class="self-crumb">ethio_address.dart</li>
+  </ol>
+  <div class="self-name">ethio_address</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="ethio_address&#47;ethio_address-library-sidebar.html">
+  
+    <div>
+      
+
+      <h1>
+        <span class="kind-library">ethio_address</span>
+        library 
+ 
+
+      </h1>
+    </div>
+
+    
+<section class="desc markdown">
+  <p>ethio_address</p>
+<p>Public convenience exports for the package.</p>
+<p>Importing <code>package:ethio_address/ethio_address.dart</code> gives you the
+data helpers, models, and the <code>EthioAddressPicker</code> widget.</p>
+</section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+      <dl>
+          <dt id="EthioAddressPicker">
+  <span class="name "><a href="../ethio_address/EthioAddressPicker-class.html">EthioAddressPicker</a></span> 
+
+</dt>
+<dd>
+  A cascading location picker for Ethiopian administrative divisions.
+</dd>
+
+          <dt id="EthioAddressSelection">
+  <span class="name "><a href="../ethio_address/EthioAddressSelection-class.html">EthioAddressSelection</a></span> 
+
+</dt>
+<dd>
+  Holds a nullable selection state for region, zone and woreda.
+</dd>
+
+          <dt id="EthioRegion">
+  <span class="name "><a href="../ethio_address/EthioRegion-class.html">EthioRegion</a></span> 
+
+</dt>
+<dd>
+  A first-level administrative division in Ethiopia.
+</dd>
+
+          <dt id="EthioWoreda">
+  <span class="name "><a href="../ethio_address/EthioWoreda-class.html">EthioWoreda</a></span> 
+
+</dt>
+<dd>
+  A woreda (district) within a zone.
+</dd>
+
+          <dt id="EthioZone">
+  <span class="name "><a href="../ethio_address/EthioZone-class.html">EthioZone</a></span> 
+
+</dt>
+<dd>
+  A zone within a region.
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="enums">
+      <h2>Enums</h2>
+      <dl>
+          <dt id="EthioAddressPickerLevel">
+  <span class="name "><a href="../ethio_address/EthioAddressPickerLevel.html">EthioAddressPickerLevel</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+      <dl class="callables">
+          <dt id="allRegions" class="callable">
+  <span class="name"><a href="../ethio_address/allRegions.html">allRegions</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ethio_address/EthioRegion-class.html">EthioRegion</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns an unmodifiable list of bundled first-level divisions (regions
+and chartered cities).
+  
+
+</dd>
+
+          <dt id="regionById" class="callable">
+  <span class="name"><a href="../ethio_address/regionById.html">regionById</a></span><span class="signature">(<wbr><span class="parameter" id="regionById-param-regionId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">regionId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../ethio_address/EthioRegion-class.html">EthioRegion</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the <code>EthioRegion</code> matching <code>regionId</code>, or <code>null</code> if none exists in
+the bundled dataset.
+  
+
+</dd>
+
+          <dt id="woredasForZone" class="callable">
+  <span class="name"><a href="../ethio_address/woredasForZone.html">woredasForZone</a></span><span class="signature">(<wbr><span class="parameter" id="woredasForZone-param-zoneId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">zoneId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ethio_address/EthioWoreda-class.html">EthioWoreda</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the woredas bundled for <code>zoneId</code>.
+  
+
+</dd>
+
+          <dt id="zonesForRegion" class="callable">
+  <span class="name"><a href="../ethio_address/zonesForRegion.html">zonesForRegion</a></span><span class="signature">(<wbr><span class="parameter" id="zonesForRegion-param-regionId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">regionId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../ethio_address/EthioZone-class.html">EthioZone</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns the zones bundled for <code>regionId</code>.
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">ethio_address</a></li>
+    <li class="self-crumb">ethio_address.dart</li>
+</ol>
+
+    <h5><span class="package-name">ethio_address</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="../ethio_address/">ethio_address</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <h5>ethio_address library</h5>
+  </div><!--/sidebar-offcanvas-right-->
+</main>
+<footer>
+  <span class="no-break">
+    ethio_address
+      0.1.1
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

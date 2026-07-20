@@ -25,7 +25,8 @@ class EthioAddressExamplePage extends StatefulWidget {
   const EthioAddressExamplePage({super.key});
 
   @override
-  State<EthioAddressExamplePage> createState() => _EthioAddressExamplePageState();
+  State<EthioAddressExamplePage> createState() =>
+      _EthioAddressExamplePageState();
 }
 
 class _EthioAddressExamplePageState extends State<EthioAddressExamplePage> {
@@ -92,12 +93,14 @@ class _EthioAddressExamplePageState extends State<EthioAddressExamplePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Region: ${_labelForRegion(_selection.regionId)}'),
-                          const SizedBox(height: 8),
-                          Text('Zone: ${_labelForZone(_selection.regionId, _selection.zoneId)}'),
+                          Text(
+                              'Region: ${_labelForRegion(_selection.regionId)}'),
                           const SizedBox(height: 8),
                           Text(
-                              'Woreda: ${_selection.woredaId ?? 'Not selected'}',
+                              'Zone: ${_labelForZone(_selection.regionId, _selection.zoneId)}'),
+                          const SizedBox(height: 8),
+                          Text(
+                            'Woreda: ${_selection.woredaId ?? 'Not selected'}',
                           ),
                         ],
                       ),

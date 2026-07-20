@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="ethio_address API docs, for the Dart programming language.">
+  <title>ethio_address - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_address">ethio_address package</a></li>
+  </ol>
+  <div class="self-name">ethio_address</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
+</header>
+<main>
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="ethio_address">ethio_address</h1>
+<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
+<!--
+[![pub package](https://img.shields.io/pub/v/ethio_address.svg)](https://pub.dev/packages/ethio_address)
+[![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+-->
+<p>Ethiopian administrative division data and cascading picker widgets for Flutter.
+The package ships a <strong>pure Dart data layer</strong> plus a <strong>Flutter Region -&gt; Zone -&gt;
+Woreda picker</strong> that is easy to embed in a form.</p>
+<h2 id="data-freshness">Data freshness</h2>
+<p><strong>As of 2026-06-21</strong> for the bundled region list and <strong>2026-05-18</strong> for the
+bundled zone list.</p>
+<p>Sources used:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Regions_of_Ethiopia">Regions of Ethiopia</a>
+(page revision timestamp: 2026-06-21). This page currently lists <strong>12
+regional states and 2 chartered cities</strong>.</li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_zones_of_Ethiopia">List of zones of Ethiopia</a>
+(page revision timestamp: 2026-05-18). This source explicitly notes that zone
+names and counts vary across public documents, so the bundled zone dataset is
+best treated as a current public reference list, not a legal boundary registry.</li>
+</ul>
+<p>Woreda-level data is <strong>not bundled</strong>. I could not verify a trustworthy, current
+source for a complete woreda dataset without guessing, so <code>woredasForZone()</code>
+returns an empty list for now.</p>
+<p>Administrative boundaries can change again. If you spot outdated data, please
+file an issue so the package can be updated.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Pure Dart data models for Ethiopian regions, zones, and woredas.</li>
+<li>Bundled current first-level divisions: 12 regional states + 2 chartered cities.</li>
+<li>Zone lookup helpers for the bundled dataset.</li>
+<li>Flutter <code>EthioAddressPicker</code> with cascading Region -&gt; Zone -&gt; Woreda fields.</li>
+<li>Form-friendly widget built from standard <code>DropdownButtonFormField</code>s.</li>
+</ul>
+<h2 id="install">Install</h2>
+<pre class="language-yaml"><code class="language-yaml">dependencies:
+  ethio_address: ^0.1.0
+</code></pre>
+<p>Then:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:ethio_address/ethio_address.dart';
+</code></pre>
+<h2 id="quick-start">Quick start</h2>
+<pre class="language-dart"><code class="language-dart">final regions = allRegions();
+final zones = zonesForRegion('oromia');
+final woredas = woredasForZone('some_zone_id');
+</code></pre>
+<h2 id="api">API</h2>
+<h3 id="data-models">Data models</h3>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EthioRegion</code></td>
+<td><code>id</code>, <code>name</code>, <code>nameAmharic</code> for a first-level administrative division.</td>
+</tr>
+<tr>
+<td><code>EthioZone</code></td>
+<td><code>id</code>, <code>name</code>, <code>nameAmharic</code>, <code>regionId</code> for a zone.</td>
+</tr>
+<tr>
+<td><code>EthioWoreda</code></td>
+<td><code>id</code>, <code>name</code>, <code>nameAmharic</code>, <code>zoneId</code> for a woreda.</td>
+</tr>
+<tr>
+<td><code>EthioAddressSelection</code></td>
+<td>Nullable region / zone / woreda selection state for the picker.</td>
+</tr>
+<tr>
+<td><code>EthioAddressPickerLevel</code></td>
+<td><code>regionOnly</code>, <code>regionZone</code>, <code>regionZoneWoreda</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lookup-helpers">Lookup helpers</h3>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>allRegions()</code></td>
+<td>Returns the bundled first-level administrative divisions.</td>
+</tr>
+<tr>
+<td><code>zonesForRegion(String regionId)</code></td>
+<td>Returns the bundled zones for one region.</td>
+</tr>
+<tr>
+<td><code>woredasForZone(String zoneId)</code></td>
+<td>Returns the bundled woredas for one zone. Currently empty.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="widget">Widget</h3>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EthioAddressPicker</code></td>
+<td>Cascading Region -&gt; Zone -&gt; Woreda picker built from <code>DropdownButtonFormField</code>s.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="example">Example</h2>
+<p>A runnable Flutter demo lives in <a href="example/"><code>example/</code></a>.</p>
+<pre class="language-bash"><code class="language-bash">cd example
+flutter run
+</code></pre>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The region list is current as of the dates above, but administrative
+divisions can change again.</li>
+<li>The bundled zone data is intentionally conservative. Where a current public
+list could be verified, it is included; where it could not, the package leaves
+that subdivision out rather than inventing one.</li>
+<li>Woreda data is omitted until a trustworthy current source can be verified.</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Part of the <a href="https://github.com/Minas-27/ethio_dev_kit">ethio_dev_kit</a>
+monorepo. Issues and pull requests are welcome. Please run <code>flutter analyze</code>
+and <code>flutter test</code> before opening a PR.</p>
+<h2 id="license">License</h2>
+<p>MIT — see <a href="LICENSE"><code>LICENSE</code></a>.</p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="ethio_address">
+  <span class="name"><a href="ethio_address/">ethio_address</a></span> 
+
+</dt>
+<dd>ethio_address
+</dd>
+
+        </dl>
+      </section>
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_address">ethio_address package</a></li>
+</ol>
+
+    <h5 class="hidden-xs"><span class="package-name">ethio_address</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="ethio_address/">ethio_address</a></li>
+</ol>
+
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+</main>
+<footer>
+  <span class="no-break">
+    ethio_address
+      0.1.1
+  </span>
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+
