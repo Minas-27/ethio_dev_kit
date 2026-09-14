@@ -2,7 +2,8 @@
 
 A collection of small, focused Dart and Flutter packages for building apps for
 Ethiopia. Each package solves one common, locale-specific problem well
-calendar conversion, Amharic typography, input validation, and speech-to-text
+calendar conversion, Amharic typography, input validation, address data and
+speech-to-text
 so you don't have to re-implement it in every project.
 
 Built for Flutter and Dart developers shipping products for Ethiopian users.
@@ -61,9 +62,19 @@ bundled model.
 
 → [`packages/amharic_stt`](packages/amharic_stt)
 
+### ethio_address
+
+[![pub package](https://img.shields.io/pub/v/ethio_address.svg)](https://pub.dev/packages/ethio_address)
+
+Ethiopian administrative division data (Region → Zone → Woreda) with cascading
+picker widgets for Flutter, on top of a pure Dart data layer.
+
+→ [`packages/ethio_address`](packages/ethio_address)
+
 ## Status
 
-All five packages are at **0.1.0** (or 0.1.1) and verified at the code level.
+All six packages are published on pub.dev, at **0.1.0** to **0.2.0**, and verified at
+the code level.
 
 **`amharic_stt` iOS support is unverified.** The Android implementation compiles
 and has been checked; the iOS (Swift / `SFSpeechRecognizer`) path has not yet
@@ -81,6 +92,7 @@ installation details, full API docs, and runnable examples:
 - [ethiopic_typography](packages/ethiopic_typography/README.md)
 - [ethio_validators](packages/ethio_validators/README.md)
 - [amharic_stt](packages/amharic_stt/README.md)
+- [ethio_address](packages/ethio_address/README.md)
 
 Each package folder also contains an `example/` you can run.
 
