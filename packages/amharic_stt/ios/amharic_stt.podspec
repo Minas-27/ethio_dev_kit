@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'amharic_stt'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'On-device Amharic (am-ET) speech-to-text for Flutter.'
   s.description      = <<-DESC
 A thin, typed Flutter wrapper over iOS SFSpeechRecognizer, fixed to the Amharic
@@ -15,7 +15,7 @@ the device/OS.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Abraham' => 'abroid.dev@gmail.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'amharic_stt/Sources/amharic_stt/**/*.swift'
   s.dependency 'Flutter'
   s.platform = :ios, '13.0'
 
@@ -24,5 +24,5 @@ the device/OS.
   s.swift_version = '5.0'
 
   # The plugin records audio (a required-reason API), so ship a privacy manifest.
-  s.resource_bundles = {'amharic_stt_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  s.resource_bundles = {'amharic_stt_privacy' => ['amharic_stt/Sources/amharic_stt/PrivacyInfo.xcprivacy']}
 end
