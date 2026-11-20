@@ -2,7 +2,7 @@ name: amharic_stt
 description: >-
   On-device Amharic (am-ET) speech-to-text for Flutter. A thin, typed wrapper
   over platform speech recognizers with honest availability checks and no custom engine.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/amharic_stt
 repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/amharic_stt
 issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues

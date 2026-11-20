@@ -1,11 +1,8 @@
 # amharic_stt
 
-<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
-<!--
 [![pub package](https://img.shields.io/pub/v/amharic_stt.svg)](https://pub.dev/packages/amharic_stt)
 [![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
--->
 
 On-device **Amharic (`am-ET`) speech-to-text** for Flutter — a thin, typed
 wrapper over each platform's **native** speech recognizer
@@ -34,7 +31,7 @@ wrapper over each platform's **native** speech recognizer
 
 ```yaml
 dependencies:
-  amharic_stt: ^0.1.0
+  amharic_stt: ^0.1.2
 ```
 
 ```dart

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2
+
+- iOS: Swift Package Manager support. The plugin's Swift source and privacy
+  manifest moved to `ios/amharic_stt/Sources/amharic_stt/` with a
+  `Package.swift`; CocoaPods keeps working from the same files.
+- README badges turned on.
+
 ## 0.1.1
 
 - Fixed `pubspec.yaml` metadata issues (description length and URLs) to resolve pub.dev scoring warnings.
