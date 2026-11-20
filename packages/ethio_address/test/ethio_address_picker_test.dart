@@ -50,4 +50,20 @@ void main() {
     expect(find.text('Awsi', skipOffstage: false), findsWidgets);
     expect(find.text('Arsi', skipOffstage: false), findsNothing);
   });
+
+  testWidgets('the default three-level picker opens with nothing chosen',
+      (tester) async {
+    // Regression: with no selection, the zone and woreda fields once shared
+    // the key 'none:none', so the default picker threw on its first build.
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: Scaffold(body: EthioAddressPicker()),
+      ),
+    );
+
+    expect(tester.takeException(), isNull);
+    expect(find.byKey(const ValueKey('ethio_address_region')), findsOneWidget);
+    expect(find.byKey(const ValueKey('ethio_address_zone')), findsOneWidget);
+    expect(find.byKey(const ValueKey('ethio_address_woreda')), findsOneWidget);
+  });
 }
