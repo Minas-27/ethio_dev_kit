@@ -1,0 +1,22 @@
+name: ethio_food
+description: >-
+  Ethiopian food composition data for Dart: 722 foods and 39 nutrients from the
+  official Ethiopian Food Composition Table 2025 (EPHI and FAO), with English
+  and Amharic names, search, portions and meals. Pure Dart, no dependencies.
+version: 0.1.0
+homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_food
+repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_food
+issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues
+topics:
+  - ethiopia
+  - nutrition
+  - food
+  - amharic
+  - health
+
+environment:
+  sdk: ^3.6.0
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.25.0
