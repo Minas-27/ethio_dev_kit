@@ -1,11 +1,8 @@
 # ethiopic_typography
 
-<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
-<!--
 [![pub package](https://img.shields.io/pub/v/ethiopic_typography.svg)](https://pub.dev/packages/ethiopic_typography)
 [![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
--->
 
 Drop-in bilingual (**English / Amharic**) Flutter theming built on the
 **Manrope + Noto Sans Ethiopic** font pairing.
@@ -30,7 +27,7 @@ fully offline with no runtime font fetching.
 
 ```yaml
 dependencies:
-  ethiopic_typography: ^0.1.0
+  ethiopic_typography: ^0.1.2
 ```
 
 Then:
