@@ -124,7 +124,7 @@ class _EthioAddressPickerState extends State<EthioAddressPicker> {
       mainAxisSize: MainAxisSize.min,
       children: [
         KeyedSubtree(
-          key: ValueKey(_regionId ?? 'none'),
+          key: ValueKey('region:${_regionId ?? 'none'}'),
           child: DropdownButtonFormField<String>(
             key: const ValueKey('ethio_address_region'),
             initialValue: _regionId,
@@ -152,7 +152,7 @@ class _EthioAddressPickerState extends State<EthioAddressPicker> {
         if (widget.level != EthioAddressPickerLevel.regionOnly) ...[
           const SizedBox(height: 12),
           KeyedSubtree(
-            key: ValueKey('${_regionId ?? 'none'}:${_zoneId ?? 'none'}'),
+            key: ValueKey('zone:${_regionId ?? 'none'}:${_zoneId ?? 'none'}'),
             child: DropdownButtonFormField<String>(
               key: const ValueKey('ethio_address_zone'),
               initialValue: _zoneId,
@@ -182,7 +182,7 @@ class _EthioAddressPickerState extends State<EthioAddressPicker> {
         if (widget.level == EthioAddressPickerLevel.regionZoneWoreda) ...[
           const SizedBox(height: 12),
           KeyedSubtree(
-            key: ValueKey('${_zoneId ?? 'none'}:${_woredaId ?? 'none'}'),
+            key: ValueKey('woreda:${_zoneId ?? 'none'}:${_woredaId ?? 'none'}'),
             child: DropdownButtonFormField<String>(
               key: const ValueKey('ethio_address_woreda'),
               initialValue: _woredaId,
