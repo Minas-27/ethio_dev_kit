@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0
+
+- New `EthiopianTime`: the Ethiopian clock, which counts the hours from 06:00,
+  with `EthiopianDayPart` (ጠዋት morning, ከሰዓት afternoon, ምሽት evening,
+  ሌሊት night). Convert from a `DateTime` or a 24-hour hour and minute, back
+  with `toHour24()`, and format in English (`3:30 morning`) or Amharic
+  (`ጠዋት 3:30`). Ordered by the time of day; invalid hours are refused.
+- Tests cover every minute of the day there and back.
+- README: an Ethiopian time section, why to choose the package, and badges.
+
 ## 0.1.0
 
 Initial release.

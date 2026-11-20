@@ -1,8 +1,9 @@
 name: ethio_calendar
 description: >-
-  Convert between Gregorian and Ethiopian calendar dates with Amharic month and
-  day names, formatting, and date arithmetic. Pure Dart, dependency-free.
-version: 0.1.0
+  Ethiopian calendar and Ethiopian time for Dart: Gregorian conversion, Amharic
+  names, formatting, date arithmetic and the Ethiopian clock. Pure Dart, no
+  dependencies.
+version: 0.2.0
 homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_calendar
 repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethio_calendar
 issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues
