@@ -27,6 +27,8 @@ jobs:
             analyze: .
           - package: ethio_validators
             analyze: .
+          - package: ethio_food
+            analyze: .
     defaults:
       run:
         working-directory: packages/${{ matrix.package }}
