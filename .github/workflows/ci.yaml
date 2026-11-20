@@ -50,6 +50,7 @@ jobs:
         package:
           - ethiopic_typography
           - amharic_stt
+          - ethio_address
     defaults:
       run:
         working-directory: packages/${{ matrix.package }}
