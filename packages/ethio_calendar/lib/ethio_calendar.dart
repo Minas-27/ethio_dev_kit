@@ -22,5 +22,6 @@ export 'src/conversion.dart'
         ethiopianToJdn,
         jdnToEthiopian;
 export 'src/ethiopian_date.dart';
+export 'src/ethiopian_time.dart';
 export 'src/formatter.dart';
 export 'src/names.dart';
