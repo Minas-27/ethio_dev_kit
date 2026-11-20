@@ -1,11 +1,8 @@
 # ethio_validators
 
-<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
-<!--
 [![pub package](https://img.shields.io/pub/v/ethio_validators.svg)](https://pub.dev/packages/ethio_validators)
 [![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
--->
 
 Validation and formatting utilities for Ethiopian-specific data:
 
@@ -22,7 +19,7 @@ runs — Flutter apps, server-side Dart, and command-line tools.
 
 ```yaml
 dependencies:
-  ethio_validators: ^0.1.0
+  ethio_validators: ^0.2.1
 ```
 
 Then:
