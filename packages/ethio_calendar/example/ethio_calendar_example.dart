@@ -27,4 +27,10 @@ void main() {
   print('\n45 days after ${exam.format('MMMM d, yyyy')} is '
       '${deadline.format('MMMM d, yyyy')} '
       '(${deadline.difference(exam)} days).');
+
+  // Ethiopian time: the clock counts from 06:00.
+  final appointment = EthiopianTime.fromHourMinute(9, 30);
+  print('\n09:30 on the international clock is '
+      '${appointment.format()} (${appointment.format(locale: EthiopianDateLocale.amharic)}) '
+      'in Ethiopian time.');
 }
