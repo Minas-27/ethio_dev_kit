@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+- README badges; the install line now points at the version with the National ID
+  validator; the package description mentions it.
+
 ## 0.2.0
 
 - Added `EthiopianNationalIdValidator` to validate and format 12-digit numeric Fayda IDs.
