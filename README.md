@@ -18,7 +18,9 @@ and no third-party runtime dependencies.
 [![pub package](https://img.shields.io/pub/v/ethio_calendar.svg)](https://pub.dev/packages/ethio_calendar)
 
 Convert between Gregorian and Ethiopian calendar dates, with Amharic month and
-day names, formatting, and date arithmetic. Pure Dart, dependency-free.
+day names, formatting, date arithmetic, and Ethiopian time of day (the clock
+that counts from 06:00, with ጠዋት, ከሰዓት, ምሽት and ሌሊት). Pure Dart,
+dependency-free.
 
 → [`packages/ethio_calendar`](packages/ethio_calendar)
 
@@ -47,7 +49,8 @@ Noto Sans Ethiopic automatically. Fonts are bundled, so it works fully offline.
 [![pub package](https://img.shields.io/pub/v/ethio_validators.svg)](https://pub.dev/packages/ethio_validators)
 
 Validation and formatting utilities for Ethiopian data: mobile phone numbers
-(Ethio Telecom & Safaricom) and ETB currency. Pure Dart, dependency-free.
+(Ethio Telecom & Safaricom), the Fayda National ID, and ETB currency. Pure Dart,
+dependency-free.
 
 → [`packages/ethio_validators`](packages/ethio_validators)
 
@@ -73,8 +76,10 @@ picker widgets for Flutter, on top of a pure Dart data layer.
 
 ## Status
 
-All six packages are published on pub.dev, at **0.1.0** to **0.2.0**, and verified at
-the code level.
+Six packages, each independently versioned on pub.dev: ethio_calendar 0.2.0,
+ethio_holidays 0.1.0, ethiopic_typography 0.1.2, ethio_validators 0.2.1,
+ethio_address 0.1.2 and amharic_stt 0.1.2. With these versions, every package
+scores the full 160/160 pub points.
 
 **`amharic_stt` iOS support is unverified.** The Android implementation compiles
 and has been checked; the iOS (Swift / `SFSpeechRecognizer`) path has not yet
@@ -91,8 +96,8 @@ installation details, full API docs, and runnable examples:
 - [ethio_holidays](packages/ethio_holidays/README.md)
 - [ethiopic_typography](packages/ethiopic_typography/README.md)
 - [ethio_validators](packages/ethio_validators/README.md)
-- [amharic_stt](packages/amharic_stt/README.md)
 - [ethio_address](packages/ethio_address/README.md)
+- [amharic_stt](packages/amharic_stt/README.md)
 
 Each package folder also contains an `example/` you can run.
 
