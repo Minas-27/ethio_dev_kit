@@ -1,11 +1,8 @@
 # ethio_address
 
-<!-- Badges: replace Minas-27 once the repo is published, then uncomment. -->
-<!--
 [![pub package](https://img.shields.io/pub/v/ethio_address.svg)](https://pub.dev/packages/ethio_address)
 [![CI](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Minas-27/ethio_dev_kit/actions/workflows/ci.yaml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
--->
 
 Ethiopian administrative division data and cascading picker widgets for Flutter.
 The package ships a **pure Dart data layer** plus a **Flutter Region -> Zone ->
@@ -45,7 +42,7 @@ file an issue so the package can be updated.
 
 ```yaml
 dependencies:
-  ethio_address: ^0.1.0
+  ethio_address: ^0.1.2
 ```
 
 Then:
