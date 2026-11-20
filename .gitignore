@@ -21,3 +21,7 @@ Thumbs.db
 
 # Coverage
 coverage/
+
+# Generated API docs (pub.dev builds its own)
+packages/*/doc/api/
+packages/ethio_address/doc/
