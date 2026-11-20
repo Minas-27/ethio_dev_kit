@@ -74,12 +74,22 @@ picker widgets for Flutter, on top of a pure Dart data layer.
 
 → [`packages/ethio_address`](packages/ethio_address)
 
+### ethio_food
+
+[![pub package](https://img.shields.io/pub/v/ethio_food.svg)](https://pub.dev/packages/ethio_food)
+
+Ethiopian food composition data: 722 foods and 39 nutrients from the official
+Ethiopian Food Composition Table 2025 (EPHI and FAO), with English and Amharic
+names, search, portions and meals. Pure Dart, dependency-free.
+
+→ [`packages/ethio_food`](packages/ethio_food)
+
 ## Status
 
-Six packages, each independently versioned on pub.dev: ethio_calendar 0.2.0,
+Seven packages, each independently versioned on pub.dev: ethio_calendar 0.2.0,
 ethio_holidays 0.1.0, ethiopic_typography 0.1.2, ethio_validators 0.2.1,
-ethio_address 0.1.2 and amharic_stt 0.1.2. With these versions, every package
-scores the full 160/160 pub points.
+ethio_address 0.1.2, amharic_stt 0.1.2 and ethio_food 0.1.0 (new). With these
+versions, the first six score the full 160/160 pub points.
 
 **`amharic_stt` iOS support is unverified.** The Android implementation compiles
 and has been checked; the iOS (Swift / `SFSpeechRecognizer`) path has not yet
