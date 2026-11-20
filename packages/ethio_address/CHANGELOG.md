@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.2
+
+- Fix: the default three-level `EthioAddressPicker` threw "Duplicate keys found"
+  on its first build when nothing was selected, because the zone and woreda
+  fields shared a key. Each field now has its own key, with a regression test.
+- README badges and a screenshot on pub.dev.
+
+## 0.1.1
+
+- Dartdoc comments on the public API.
+
 ## 0.1.0
 
 Initial release.
