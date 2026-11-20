@@ -2,7 +2,7 @@ name: ethiopic_typography
 description: >-
   Drop-in bilingual Flutter theming with Manrope + Noto Sans Ethiopic font
   pairing. Latin text uses Manrope; Ge'ez falls back to Noto Sans Ethiopic.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethiopic_typography
 repository: https://github.com/Minas-27/ethio_dev_kit/tree/main/packages/ethiopic_typography
 issue_tracker: https://github.com/Minas-27/ethio_dev_kit/issues
@@ -12,6 +12,9 @@ topics:
   - typography
   - theme
   - fonts
+screenshots:
+  - description: 'English and Amharic text side by side in Manrope and Noto Sans Ethiopic'
+    path: screenshots/typography.png
 
 environment:
   sdk: ^3.6.0

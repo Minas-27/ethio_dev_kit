@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- README badges and a screenshot on pub.dev.
+
 ## 0.1.1
 
 - Fixed `pubspec.yaml` metadata issues (description length and URLs) to resolve pub.dev scoring warnings.
